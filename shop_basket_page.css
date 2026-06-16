@@ -1,0 +1,180 @@
+.trash_can_icon {
+    color: red;
+    cursor: pointer;
+    font-size: 20px;
+
+}
+
+
+
+@media screen and (min-width:320px) and (max-width:768px) {
+    #empty_shop_basket_pic_box img {
+        width: 80% !important;
+    }
+
+}
+
+.product_pic {
+    width: 80%;
+}
+
+@media screen and (min-width:320px) and (max-width:768px) {
+    .product_pic {
+        width: 250px;
+    }
+
+    .product_info {
+        text-align: center;
+    }
+}
+
+
+@media screen and (min-width:769px) and (max-width:992px) {
+
+    .product_info {
+        text-align: center;
+    }
+}
+
+
+
+.trash_can_icon2 {
+    color: red;
+    cursor: pointer;
+    font-size: 20px;
+
+
+}
+
+.see_product_btn {
+    background-color: var(--brand-main);
+    color: var(--text-white);
+}
+
+.see_product_btn:hover {
+    background-color: var(--hover-btn);
+    color: var(--text-white);
+}
+
+.custom_btn {
+    background-color: var(--brand-main);
+    color: var(--text-white);
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
+.custom_btn:hover {
+    background-color: var(--hover-btn);
+    color: var(--text-white);
+}
+
+
+
+.add_input {
+    width: 70px;
+}
+
+
+.cart-header {
+    display: flex;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.cart-header div {
+    text-align: center;
+}
+
+/* هر ردیف محصول */
+/* .cart-item {
+    display: flex;
+
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+    align-items: center;
+} */
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+/* تنظیم عرض ستون‌ها در دسکتاپ */
+
+.col-img {
+    width: 10%;
+    text-align: center;
+}
+
+.col-name {
+    width: 25%;
+    text-align: center;
+}
+
+.col-price {
+    width: 8%;
+    text-align: center;
+}
+
+.col-color {
+    width: 20%;
+    text-align: center;
+}
+
+.col-size {
+    width: 10%;
+    text-align: center;
+}
+
+.col-qty {
+    width: 15%;
+    text-align: center;
+}
+
+/* .col-action {
+    width: 10%;
+    text-align: center;
+} */
+
+
+.product_pic {
+    max-width: 90px;
+    height: auto;
+    border-radius: 8px;
+
+}
+
+/* .product_pic2 {
+    max-width: 120px;
+    height: auto;
+    border-radius: 8px;
+} */
+
+@media screen and (min-width:768px) and (max-width:992px) {
+    .product_pic {
+        max-width: 200px;
+        height: auto;
+        border-radius: 8px;
+
+    }
+}
+
+
+
+@media screen and (min-width:350px) and (max-width:400px) {
+    .total_price_each_item {
+        display: block;
+        margin-right: 100px !important;
+    }
+}
+
+@media screen and (min-width:401px) and (max-width:428px) {
+    .count_item {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

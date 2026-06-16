@@ -1,0 +1,228 @@
+main {
+    width: 100%;
+    height: auto;
+}
+
+
+.row img {
+    cursor: pointer;
+}
+
+.thumb {
+    cursor: pointer;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.thumb:hover {
+    border: 2px solid var(--brand-main);
+}
+
+.product_pic_show_btn {
+    width: 33px;
+    height: 33px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px var(--buttons-bg-color);
+    position: absolute;
+    top: 45%;
+}
+
+.product_pic_show_btn i {
+    color: var(--text-dark);
+    font-size: 26px;
+}
+
+.product_pic_show_next {
+    padding-top: 6px;
+    padding-right: 3px;
+
+}
+
+.product_pic_show_prev {
+    padding-top: 6px;
+    padding-left: 3px;
+
+}
+
+
+.little_product_pic_show_btn i {
+    color: var(--text-dark);
+    font-size: 24px;
+}
+
+.little_product_pic_show_prev {
+    padding-top: 6px;
+    padding-left: 2px;
+    position: absolute;
+    top: 16px;
+    right: -30px;
+}
+
+.little_product_pic_show_next {
+    padding-top: 6px;
+    padding-right: 2px;
+    position: absolute;
+    top: 16px;
+    left: -30px;
+}
+
+@media screen and (max-width:763px) {
+    .little_product_pic_show_prev {
+        padding-top: 6px;
+        padding-left: 2px;
+        position: absolute;
+        top: 16px;
+        right: -24px;
+    }
+
+    .little_product_pic_show_next {
+        padding-top: 6px;
+        padding-right: 2px;
+        position: absolute;
+        top: 16px;
+        left: -24px;
+    }
+}
+
+@media screen and (min-width:950px) and (max-width:1261px) {
+    .little_product_pic_show_prev {
+        padding-top: 6px;
+        padding-left: 2px;
+        position: absolute;
+        top: 16px;
+        right: -30px;
+    }
+
+    .little_product_pic_show_next {
+        padding-top: 6px;
+        padding-right: 2px;
+        position: absolute;
+        top: 16px;
+        left: -30px;
+    }
+}
+
+@media screen and (min-width:320px) and (max-width:992px) {
+    .product_pics_card {
+        padding-bottom: 50px !important;
+    }
+}
+
+.product_colors {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    position: relative;
+}
+
+.color_blue {
+    background-color: var(--blue-color);
+}
+
+.color_green {
+    background-color: var(--green-color);
+}
+
+.color_red {
+    background-color: var(--red-color);
+}
+
+.color_khaki {
+    background-color: var(--khaki-color);
+}
+
+.color_gray {
+    background-color: var(--gray-color);
+}
+
+
+.custom_btn {
+    background-color: var(--brand-main);
+    color: var(--text-white);
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
+.custom_btn:hover {
+    background-color: var(--hover-btn);
+    color: var(--text-white);
+}
+
+.heart_icnon {
+    cursor: pointer;
+}
+
+
+
+.error_exist_product_notif {
+
+    width: 250px;
+    height: 50px;
+    background-color: rgb(239, 186, 186);
+    color: rgb(184, 12, 12);
+    opacity: 1;
+    border-radius: 14px;
+    padding: 12px;
+}
+
+.add_product_to_basket_notif {
+
+    width: 280px;
+    height: 50px;
+    background-color: rgb(123, 239, 110);
+    color: rgb(3, 86, 3);
+    opacity: 1;
+    border-radius: 14px;
+    padding: 12px;
+}
+
+.hide_notif {
+    opacity: 0;
+}
+
+
+
+
+.product_colors.selected::after {
+
+    /* اینجا یعنی اگر اون دایره های رنگی کلاس سلکتد داشتن اون وقت یه خط زیرش بکش و با جاوا اسکریپت میایم میگیم وقتی روش کلیک شد کلاس سلکتد رو بهش اضافه کن و حالا که اضافه شده سی اس  اس میگه الان یکی از اون دایره های رنگی کلاس سلکتد داره پس خط رو زیرش میکشم */
+
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 3px;
+    bottom: -8px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    /*  خط بالا وقتی لفت پنجاه درصد خط رو از سمت چپ به وسط می‌بره،  ترمنسفرم ایکس منفی پنجاه درصد خودِ خط رو به اندازه نصف عرض خودش به سمت چپ برمی‌گردونه. نتیجه این میشه که وسطِ خط دقیقاً روی وسطِ دایره والد قرار میگیره. */
+
+    background-color: var(--brand-main);
+    border-radius: 2px;
+
+}
+
+.size_box {
+    width: 34px;
+    height: 34px;
+    border: 2px solid rgb(214, 209, 209);
+    padding-right: 12px;
+    padding-top: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.selected2 {
+    border: 3px solid var(--brand-main);
+}
+
+.add_input {
+    width: 70px;
+}
+
+
+.size_table{
+    cursor: pointer;
+}

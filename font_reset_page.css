@@ -1,0 +1,412 @@
+:root {
+    --brand-main: #db2777;
+    --text-white: white;
+    --text-dark: black;
+    --hover-btn: #c8085e;
+    --blue-color: blue;
+    --pink-color: pink;
+    --gray-color: rgb(195, 193, 193);
+    --brown-color: rgb(71, 43, 7);
+    --green-color: green;
+    --khaki-color: rgb(162, 127, 82);
+    --red-color: red;
+    --black-color: black;
+    --kerem-color: burlywood;
+    --nescafe-color: rgb(184, 147, 98);
+    --shotori-color: rgb(148, 92, 19);
+    --shiri-color: rgb(213, 197, 178);
+    --sormei-color: rgb(10, 10, 109);
+    --yellow-color: rgb(243, 243, 21);
+    --white-color: white;
+}
+
+@font-face {
+    font-family: shabnam;
+    src: url(font/shabnam/Farsi-Digits/Shabnam-FD.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    max-width: 1400px;
+    margin: auto;
+    direction: rtl;
+    font-family: shabnam;
+
+}
+
+
+
+#consult {
+    font-size: 18px;
+}
+
+#consult_icon i {
+    font-size: 16px;
+}
+
+#consult_icon i:hover {
+    color: rgb(13, 195, 13);
+    transition: 0.3s;
+}
+
+.basket_prof_icon:hover {
+    color: var(--brand-main);
+}
+
+
+#logo {
+    width: 110px;
+    height: 40px;
+}
+
+#upper_body_list {
+    position: relative;
+    cursor: pointer;
+}
+
+#upper_body_card {
+    position: absolute;
+    right: 2%;
+    width: 130px;
+    height: 300px;
+    border: 1px solid var(--brand-main);
+    border-radius: 15px;
+    opacity: 0;
+    visibility: hidden;
+    padding-right: 20px;
+    background-color: var(--text-white);
+
+}
+
+#upper_body_card li:hover {
+    color: var(--brand-main);
+}
+
+#upper_body_list:hover #upper_body_card {
+    opacity: 1;
+    visibility: visible;
+    transition: 0.6s;
+}
+
+.icons {
+    width: 20px;
+    height: 20px;
+}
+
+
+#lower_body_list {
+    position: relative;
+    cursor: pointer;
+}
+
+#lower_body_card {
+    position: absolute;
+    right: 2%;
+    width: 160px;
+    height: 150px;
+    border: 1px solid var(--brand-main);
+    border-radius: 15px;
+    opacity: 0;
+    visibility: hidden;
+    padding-right: 20px;
+    background-color: var(--text-white);
+
+}
+
+#lower_body_card li:hover {
+    color: var(--brand-main);
+}
+
+#lower_body_list:hover #lower_body_card {
+    opacity: 1;
+    visibility: visible;
+    transition: 0.6s;
+}
+
+#Official_parliamentary {
+    cursor: pointer;
+}
+
+@media screen and (min-width:320px) and (max-width:992px) {
+    #logo_box {
+        display: block;
+        margin: auto;
+    }
+}
+
+#tablet_mobile_nav {
+    border-top: 2px solid var(--brand-main);
+    background-color: var(--text-white);
+}
+
+
+/* .........آفکانواس موبایل و تبلت .........*/
+
+
+/* حذف آبی شدن آکاردیون */
+.accordion-button {
+    background-color: transparent;
+    color: var(--text-dark);
+    box-shadow: none;
+}
+
+/* وقتی باز است */
+.accordion-button:not(.collapsed) {
+    background-color: transparent;
+    color: var(--text-dark);
+    box-shadow: none;
+}
+
+/* حذف افکت فوکوس (آبی دورش) */
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+
+.accordion-button {
+    background-color: transparent;
+    color: var(--text-dark);
+    box-shadow: none;
+}
+
+
+/* ==================فوتر============ */
+
+footer {
+    width: 100%;
+    height: auto;
+    background-color: var(--white-color);
+    box-shadow: 4px 5px 20px rgb(195, 193, 193);
+}
+
+
+#footer_logo {
+    width: 140px;
+}
+
+.trust_logo {
+    width: 55px;
+
+}
+
+
+@media screen and (max-width:768px) {
+
+    #logo_info_side {
+        text-align: center;
+    }
+
+    #footer_logo {
+        display: block;
+        margin: auto;
+    }
+
+    #logo_info_side p {
+        justify-content: center;
+    }
+
+    .footer_ul li {
+        font-size: 14px;
+        text-align: center;
+    }
+
+
+    footer {
+
+        height: 1000px;
+
+    }
+
+}
+
+
+@media screen and (min-width:769px) and (max-width:992px) {
+
+
+
+    #logo_info_side {
+        text-align: center;
+    }
+
+    #footer_logo {
+        display: block;
+        margin: auto;
+    }
+
+    #logo_info_side p {
+        justify-content: center;
+    }
+
+    .footer_ul li {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    footer {
+
+        height: 1045px;
+
+    }
+
+
+}
+
+@media screen and (min-width:320px) and (max-width:768px) {
+    #products_list_items_card {
+        padding-bottom: 40px;
+    }
+}
+
+@media screen and (min-width:769px) and (max-width:992px) {
+    #products_list_items_card {
+        padding-bottom: 40px;
+    }
+}
+
+
+#count_delivery {
+    background-color: var(--brand-main);
+    top: 8px;
+    left: 0px;
+    width: 17px;
+    height: 20px;
+    padding: 5px;
+
+}
+
+#count_delivery2 {
+    background-color: var(--brand-main);
+    top: -6px;
+    left: 6px;
+
+}
+
+
+
+.product_colors {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.color_blue {
+    background-color: var(--blue-color);
+}
+
+.color_pink {
+    background-color: var(--pink-color);
+}
+
+.color_gray {
+    background-color: var(--gray-color);
+}
+
+.color_brown {
+    background-color: var(--brown-color);
+}
+
+.color_green {
+    background-color: var(--green-color);
+}
+
+.color_khaki {
+    background-color: var(--khaki-color);
+}
+
+.color_red {
+    background-color: var(--red-color);
+}
+
+.color_black {
+    background-color: var(--black-color);
+}
+
+.color_kerem {
+    background-color: var(--kerem-color);
+
+}
+
+.color_nescafe {
+    background-color: var(--nescafe-color);
+}
+
+.color_shotori {
+    background-color: var(--shotori-color);
+}
+
+.color_shiri {
+    background-color: var(--shiri-color);
+}
+
+.color_sormei {
+    background-color: var(--sormei-color);
+}
+
+.color_white {
+    background-color: var(--white-color);
+    border: 1px solid black;
+}
+
+.color_yellow {
+    background-color: var(--yellow-color);
+
+}
+
+.color_yellow {
+    background-color: var(--yellow-color);
+
+}
+
+.color_bone {
+    background-color: var(--bone-color);
+}
+
+.color_zoghali {
+    background-color: var(--zoghali-color);
+}
+
+.custom_btn {
+    background-color: var(--brand-main);
+    color: var(--text-white);
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
+.custom_btn:hover {
+    background-color: var(--hover-btn);
+    color: var(--text-white);
+}
+
+
+
+.product_pic_show_btn {
+    width: 33px;
+    height: 33px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px var(--buttons-bg-color);
+    position: absolute;
+    top: 45%;
+}
+
+.product_pic_show_btn i {
+    color: var(--text-dark);
+    font-size: 26px;
+}
+
+.product_pic_show_next {
+    padding-top: 6px;
+    padding-right: 3px;
+
+}
+
+.product_pic_show_prev {
+    padding-top: 6px;
+    padding-left: 3px;
+
+}

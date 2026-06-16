@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحه جزییات شومیز لئو</title>
+    <link rel="stylesheet" href="css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="font_reset_page.css">
+    <link rel="stylesheet" href="leo_shomiz_details.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+  
+  <link rel="stylesheet" href="icons/bootstrap-icons-1.11.3/font/bootstrap-icons.css">
+</head>
+<body>
+   
+    <nav class="navbar bg-white sticky-top">
+
+        <!-- ....................نو بالا ...............-->
+        <div id="top_nav"
+            class=" d-flex justify-content-between align-items-center container-fluid  pb-2 d-none d-lg-flex">
+            <div class=" align-items-center gap-2 ">
+                <span id="consult">پشتیبانی</span>
+                <a href="tel:555-555-5555" id="consult_icon" class="navbar-brand">
+                    <i class="bi bi-telephone-fill"></i>
+                </a>
+            </div>
+
+            <div class="d-flex align-items-center ">
+
+                <div class="input-group me-3">
+                    <input type="text" class="form-control" placeholder=" جستجو کنید">
+                    <span class="input-group-text bg-white pt-2">
+                        <i class="bi bi-search "></i>
+                    </span>
+
+                </div>
+
+
+
+                <a href="signup_page.html" class="nav-link me-3 mt-2 basket_prof_icon "><i
+                        class="bi bi-person fs-5"></i></a>
+
+                <a href="shop_basket_page.html" class="nav-link mt-2 basket_prof_icon"><i
+                        class="bi bi-cart fs-5"></i></a>
+                <span id="count_delivery" class="badge position-absolute rounded-5 ">0</span>
+            </div>
+        </div>
+        <hr class="w-100 m-0 d-none d-lg-block">
+
+        <!-- ...........نو پایین........... -->
+        <div id="bottom_nav" class=" d-flex navbar-expand-lg bg-white position-relative container-fluid pt-2 ">
+
+            <!-- ..........لوگو............. -->
+            <a id="logo_box" href="index.html" class="navbar-brand  d-lg-none">
+                <img id="logo" src="pics/logo.png" alt="لوگو">
+            </a>
+
+            <a id="logo_box_desktop" href="index.html" class="navbar-brand d-none d-lg-flex ">
+                <img id="logo" src="pics/logo.png" alt="لوگو">
+            </a>
+
+
+            <i class="bi bi-search fs-3 d-lg-none "></i>
+
+            <!-- ........منوی همبرگری که فقط آف کانواس رو باز میکنه........ -->
+            <button class="navbar-toggler position-absolute me-2" data-bs-toggle="offcanvas"
+                data-bs-target="#mobile_offcanvas">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- ...........منوی دسکتاپ........ -->
+            <ul class="d-none d-lg-flex navbar-nav m-auto mt-2">
+                <li class="nav-item me-4"><a class="nav-link" href="index.html">صفحه اصلی</a></li>
+
+                <li id="upper_body_list" class="nav-item  me-4 ">
+                    <span class="nav-link ">
+                        بالا تنه </span>
+
+                    <ul class="list-unstyled" id="upper_body_card">
+
+
+                        <li class="mt-3"><a class="text-decoration-none text-dark" href="#"><img class="icons me-2"
+                                    src="pics/blouse.png" alt="آیکون شومیز">شومیز</a></li>
+
+
+
+                        <li class="mt-3"><a class="text-decoration-none text-dark" href="#"><img class="icons me-2"
+                                    src="pics/suit-2.png" alt="آیکون کت">کت</a></li>
+
+
+
+                        <li class="mt-3"><a class="text-decoration-none text-dark" href="#"><img class="icons me-2"
+                                    src="pics/shaket-shirt.png" alt="آیکون شکت">شکت</a></li>
+
+
+                        <li class="mt-3"><a class="text-decoration-none text-dark" href="#"><img class="icons me-2"
+                                    src="pics/sweater-2.png" alt="آیکون پلیور">پلیور</a></li>
+
+
+                        <li class="mt-3"><a class="text-decoration-none text-dark" href="#"><img class="icons me-2"
+                                    src="pics/sweatshirt.png" alt="آیکون دورس">دورس</a></li>
+
+
+                        <li class="mt-3"><a class="text-decoration-none text-dark" href="#"><img class="icons me-2"
+                                    src="pics/classic.png" alt="آیکون ژیله">ژیله</a></li>
+
+
+                        <li class="mt-3"><a class="text-decoration-none text-dark" href="#"><img class="icons me-2"
+                                    src="pics/hoodie.png" alt="آیکون هودی">هودی</a></li>
+
+                    </ul>
+
+
+
+                </li>
+                <li id="lower_body_list" class="nav-item  me-4 ">
+                    <span class="nav-link courses">
+                        پایین تنه </span>
+
+
+
+                    <ul class="list-unstyled" id="lower_body_card">
+
+
+                        <li class="mt-3"><a class="text-decoration-none text-dark" href="#"><img class="icons me-2"
+                                    src="pics/skirt.png" alt="آیکون دامن">دامن</a></li>
+
+
+
+                        <li class="mt-3"><a class="text-decoration-none text-dark" href="#"><img class="icons me-2"
+                                    src="pics/woman-pants.png" alt="آیکون شلوار پارچه ای">شلوار پارچه ای</a></li>
+
+
+
+                        <li class="mt-3"><a class="text-decoration-none text-dark" href="#"><img class="icons me-2"
+                                    src="pics/jeans.png" alt="آیکون شلوار جین ">شلوار جین</a></li>
+
+
+                    </ul>
+
+
+
+                </li>
+
+                <li id="
+Official_parliamentary" class="nav-item  me-4 ">
+                    <a class="text-decoration-none text-dark" href="#">
+                        <span class="nav-link">
+                            رسمی و مجلسی </span>
+                    </a>
+
+                </li>
+
+            </ul>
+            <a href="#" class="nav-item nav-link me-4 d-none d-lg-block">درباره ما</a>
+            <a href="#" class="nav-item nav-link me-4 d-none d-lg-block">تماس با ما</a>
+
+
+
+        </div>
+
+    </nav>
+
+    <!-- =================  منوی تبلت و موبایل =========-->
+
+    <nav id="tablet_mobile_nav" class="d-lg-none navbar navbar-light   fixed-bottom d-flex justify-content-around ">
+        <a class="nav-link text-center" href="index.html">
+            <i class="bi bi-house fs-5"></i><br>صفحه اصلی
+        </a>
+        <a class="nav-link text-center" href="signup_page.html">
+            <i class="bi bi-person fs-5"></i><br>پروفایل
+        </a>
+        <a class="nav-link text-center position-relative" href="shop_basket_page.html">
+            <i class="bi bi-cart fs-5 "></i><br>سبد خرید
+            <span id="count_delivery2" class="badge position-absolute rounded-5 "> 0</span>
+        </a>
+
+        <a class="nav-link text-center" href="tel:555-555-5555">
+            <i class="bi bi-telephone-fill fs-5"></i><br>پشتیبانی
+        </a>
+    </nav>
+    <!-- =========آف کانواس موبایل و تبلت=========== -->
+    <div class="offcanvas offcanvas-start" id="mobile_offcanvas">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title"><img class="w-25 mt-2 " src="pics/logo.png" alt="لوگوی سایت"></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+
+        <div class="offcanvas-body">
+            <div class="input-group  mb-3">
+                <input type="text" class="form-control" placeholder=" جستجو کنید">
+                <span class="input-group-text bg-white pt-2">
+                    <i class="bi bi-search "></i>
+                </span>
+
+            </div>
+            <!-- آکاردیون -->
+            <ul class="navbar-nav accordion" id="mobileAccordion">
+
+                <!--بالا تنه-->
+                <li class="nav-item accordion-item border-0 ">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed nav-link " type="button" data-bs-toggle="collapse"
+                            data-bs-target="#acc_upperbody">
+                            بالاتنه
+                        </button>
+                    </h2>
+
+
+                    <ul id="acc_upperbody" class="list-unstyled ps-4 accordion-collapse collapse"
+                        data-bs-parent="#mobileAccordion">
+
+                        <li class="mt-3"><a class="text-decoration-none text-dark" href="#"><img class="icons me-2"
+                                    src="pics/blouse.png" alt="آیکون شومیز">شومیز</a></li>
+
+
+
+                        <li class="mt-3"><a class="text-decoration-none text-dark" href="#"><img class="icons me-2"
+                                    src="pics/suit-2.png" alt="آیکون کت">کت</a></li>
+
+
+
+                        <li class="mt-3"><a class="text-decoration-none text-dark" href="#"><img class="icons me-2"
+                                    src="pics/shaket-shirt.png" alt="آیکون شکت">شکت</a></li>
+
+
+                        <li class="mt-3"><a class="text-decoration-none text-dark" href="#"><img class="icons me-2"
+                                    src="pics/sweater-2.png" alt="آیکون پلیور">پلیور</a></li>
+
+
+                        <li class="mt-3"><a class="text-decoration-none text-dark" href="#"><img class="icons me-2"
+                                    src="pics/sweatshirt.png" alt="آیکون دورس">دورس</a></li>
+
+
+                        <li class="mt-3"><a class="text-decoration-none text-dark" href="#"><img class="icons me-2"
+                                    src="pics/classic.png" alt="آیکون ژیله">ژیله</a></li>
+
+
+                        <li class="mt-3 mb-2"><a class="text-decoration-none text-dark" href="#"><img class="icons me-2"
+                                    src="pics/hoodie.png" alt="آیکون هودی">هودی</a></li>
+
+
+                    </ul>
+
+                </li>
+
+                <!-- پایین تنه -->
+                <li class="nav-item accordion-item border-0">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed nav-link " type="button" data-bs-toggle="collapse"
+                            data-bs-target="#acc_lowerbody">
+
+                            پایین تنه
+                        </button>
+                    </h2>
+
+
+                    <ul id="acc_lowerbody" class="list-unstyled ps-4 accordion-collapse collapse"
+                        data-bs-parent="#mobileAccordion">
+
+                        <li class="mt-3"><a class="text-decoration-none text-dark" href="#"><img class="icons me-2"
+                                    src="pics/skirt.png" alt="آیکون دامن">دامن</a></li>
+
+
+
+                        <li class="mt-3"><a class="text-decoration-none text-dark" href="#"><img class="icons me-2"
+                                    src="pics/woman-pants.png" alt="آیکون شلوار پارچه ای">شلوار پارچه ای</a></li>
+
+
+
+                        <li class="mt-3"><a class="text-decoration-none text-dark" href="#"><img class="icons me-2"
+                                    src="pics/jeans.png" alt="آیکون شلوار جین ">شلوار جین</a></li>
+                    </ul>
+
+                </li>
+
+                <!-- رسمی و مجلسی -->
+                <li id="
+Official_parliamentary" class="nav-item  me-4  ms-3 mt-3">
+                    <a class="text-decoration-none text-dark" href="#">
+                        <span class="nav-link">
+                            رسمی و مجلسی </span>
+                    </a>
+
+                </li>
+                <li class="nav-item  ms-3 mt-3"><a class="nav-link" href="#">درباره ما</a></li>
+                <li class="nav-item mt-3 ms-3"><a class="nav-link" href="#">تماس با ما</a></li>
+
+
+            </ul>
+
+
+        </div>
+    </div>
+
+ <main>
+
+        <div id="demo"></div>
+        <!-- سکشن محصول -->
+        <section class="container productCard py-5">
+            <div class="row g-4 ">
+
+                <!-- تصاویر -->
+                <div class="col-12 col-lg-6">
+
+                    <div class="card p-3 product_pics_card ">
+
+                        <!-- ===== اسلایدر عکس بزرگ ===== -->
+                        <div id="mainCarousel_leo" class="carousel slide mb-3 position-relative">
+
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="pics/leo1.png" alt="عکس اول شومیز لئو"
+                                        class="d-block w-100 rounded product_pic">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="pics/leo2.png" alt="عکس دوم شومیز لئو" class="d-block w-100 rounded">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="pics/leo3.png" alt="عکس سوم شومیز لئو" class="d-block w-100 rounded">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="pics/leo_blue.png" alt="عکس شومیز آبی لئو"
+                                        class="d-block w-100 rounded">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="pics/leo_green.png" alt="عکس شومیز سبز  لئو"
+                                        class="d-block w-100 rounded">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="pics/leo_red.png" alt="عکس شومیز  قرمز لئو"
+                                        class="d-block w-100 rounded">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="pics/leo_khaki.png" alt="عکس شومیز خاکی لئو"
+                                        class="d-block w-100 rounded">
+                                </div>
+<div class="carousel-item">
+                                    <img src="pics/leo_toosi.png" alt="عکس شومیز طوسی لئو"
+                                        class="d-block w-100 rounded">
+                                </div>
+                            </div>
+
+                            <!-- دکمه‌ها -->
+                            <button class="product_pic_show_prev carousel-control-prev product_pic_show_btn"
+                                type="button" data-bs-target="#mainCarousel_leo" data-bs-slide="prev">
+                                <i class="bi bi-chevron-right"></i>
+                            </button>
+
+                            <button class="product_pic_show_next carousel-control-next product_pic_show_btn"
+                                type="button" data-bs-target="#mainCarousel_leo" data-bs-slide="next">
+                                <i class="bi bi-chevron-left"></i>
+                            </button>
+                        </div>
+
+                        <!-- ===== اسلایدر thumbnail ===== -->
+                        <div id="thumbCarousel" class="carousel slide position-relative">
+                            <div class="carousel-inner">
+
+                                <!-- اسلاید اول (عکس 1 تا 4) -->
+                                <div class="carousel-item active">
+                                    <div class="row g-2">
+                                        <div class="col-3 product_little_photos">
+                                            <img src="pics/leo1.png" alt="عکس اول شومیز لئو" class="w-100  thumb"
+                                                data-bs-target="#mainCarousel_leo" data-bs-slide-to="0">
+                                        </div>
+                                        <div class="col-3">
+                                            <img src="pics/leo2.png" alt="عکس دوم شومیز لئو" class="w-100 thumb"
+                                                data-bs-target="#mainCarousel_leo" data-bs-slide-to="1">
+                                        </div>
+                                        <div class="col-3">
+                                            <img src="pics/leo3.png" alt="عکس سوم شومیز لئو" class="w-100 thumb"
+                                                data-bs-target="#mainCarousel_leo" data-bs-slide-to="2">
+                                        </div>
+                                        <div class="col-3">
+                                            <img src="pics/leo_blue.png" alt="عکس شومیز  آبی لئو"
+                                                class="w-100 thumb" data-bs-target="#mainCarousel_leo" data-bs-slide-to="3">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- اسلاید دوم (عکس 5 تا 8) -->
+                                <div class="carousel-item">
+                                    <div class="row g-2 justify-content-between">
+                                        <div class="col-3">
+                                            <img src="pics/leo_green.png" alt="عکس شومیز سبز  لئو"
+                                                class="w-100 thumb" data-bs-target="#mainCarousel_leo" data-bs-slide-to="4">
+                                        </div>
+                                        <div class="col-3">
+                                            <img src="pics/leo_red.png" alt="عکس شومیز قرمز لئو"
+                                                class="w-100 thumb" data-bs-target="#mainCarousel_leo" data-bs-slide-to="5">
+                                        </div>
+                                        <div class="col-3">
+                                            <img src="pics/leo_khaki.png" alt="عکس شومیز خاکی لئو" class="w-100 thumb"
+                                                data-bs-target="#mainCarousel_leo" data-bs-slide-to="6">
+                                        </div>
+  <div class="col-3">
+                                            <img src="pics/leo_toosi.png" alt="عکس شومیز طوسی لئو" class="w-100 thumb"
+                                                data-bs-target="#mainCarousel_leo" data-bs-slide-to="7">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- دکمه جابه‌جایی thumbnail -->
+                            <button class="little_product_pic_show_prev carousel-control-prev small-btn 
+                        little_product_pic_show_btn" data-bs-target="#thumbCarousel" data-bs-slide="prev">
+                                <i class="bi bi-chevron-right"></i>
+                            </button>
+
+                            <button
+                                class="little_product_pic_show_next carousel-control-next small-btn little_product_pic_show_btn"
+                                data-bs-target="#thumbCarousel" data-bs-slide="next">
+                                <i class="bi bi-chevron-left"></i>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+                <!-- مشخصات خلاصه -->
+                <div class="col-12 col-lg-6 pb-5">
+
+                    <h4 class="fw-bold mb-2 product_name">
+                  شومیز لئو - leo - کد 385
+                    </h4>
+
+                    <hr>
+                    <!-- لیست مشخصات -->
+                    <ul class="features_list list-unstyled">
+                        <li>
+                            <i class="bi bi-check fs-4 ms-1"></i>پارچه : لینن راه راه
+                        <li><i class="bi bi-check fs-4 ms-1"></i>سایز : 1و2</li>
+
+                    </ul>
+                    
+
+                    <div class="product_colors_box d-flex  ms-3 mt-2 position-relative">
+
+                        <!-- توی اچ تی ام ال ویژگی‌هایی که با دیتا شروع میشن، به عنوان دیتا اتریبیوت  شناخته میشن. برای این هستن که ما بتونیم اطلاعات سفارشی و دلخواه خودتون رو مستقیماً به عناصر اچ تی ام ال وصل کنید. -->
+
+                        <!-- وقتی در جاوااسکریپت به المنت.دیتا ست دسترسی پیدا می‌کنیم، می‌تونید به این  دیتا اتریبیوت دسترسی داشته باشیم. مثلاً دیتا کالر رو میتونیم با دیتا ست.کالر بخونیم  -->
+
+                        <div class="product_colors color_blue rounded-5 me-2 " data-bs-slide-to="3"
+                            data-bs-target="#mainCarousel_leo" data-color="آبی"></div>
+                        <div class="product_colors color_green rounded-5 me-2 " data-bs-slide-to="4"
+                            data-bs-target="#mainCarousel_leo" data-color="سبز"></div>
+                        <div class="product_colors color_red rounded-5 me-2 " data-bs-slide-to="5"
+                            data-bs-target="#mainCarousel_leo" data-color=" قرمز"></div>
+                                   <div class="product_colors color_khaki rounded-5 me-2 " data-bs-slide-to="6"
+                            data-bs-target="#mainCarousel_leo" data-color=" خاکی"></div>
+                                   <div class="product_colors color_gray rounded-5 me-2 " data-bs-slide-to="7"
+                            data-bs-target="#mainCarousel_leo" data-color=" طوسی"></div>
+                        <h6 class="me-2">(برای مشاهده هر رنگ روی دایره ها کلیک کنید.)</h6>
+                    </div>
+
+                    <div class="d-block mt-4 ms-3 text-decoration-none text-dark size_table" data-bs-toggle="modal" data-bs-target="#sizeGuideModal_leo">
+                        <i class="bi-rulers"></i>
+                        جدول سایز بندی (کلیک کنید)
+                    </div>
+
+
+                    <div class="modal fade" id="sizeGuideModal_leo" >
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title " id="sizeGuideModalLabel">راهنمای انتخاب سایز</h5>
+        <button type="button" class="btn-close " data-bs-dismiss="modal" ></button>
+      </div>
+
+      <div class="modal-body">
+        <div class="table-responsive">
+          <table class="table  text-center ">
+            <thead class="table-light">
+              <tr>
+                <th>سایز</th>
+                <th>دور سینه</th>
+                <th>دور کمر</th>
+                <th>قد لباس</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>90-94</td>
+                <td>70-74</td>
+                <td>60</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>96-100</td>
+                <td>76-80</td>
+                <td>62</td>
+              </tr>
+              <tr>
+               
+                
+            
+             
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="mt-3 small text-muted">
+          لطفاً برای انتخاب دقیق‌تر، اندازه‌های خود را با جدول بالا مقایسه کنید.
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">بستن</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+                    <div class="d-flex mt-3 ms-3 size_box_main">
+                        <span class="me-2 mt-2 ">سایز :</span>
+                        <div class="size_box me-3 " data-size="1">1</div>
+                        <div class="size_box " data-size="2">2</div>
+                    </div>
+
+
+                    <button class="btn custom_btn mt-4 " onclick="add_to_basket(this)">
+                        افزودن به سبد خرید
+                        <i class="bi-plus-square ms-2"></i>
+
+                    </button>
+
+                    <div class="mt-3"><i class="bi bi-heart heart_icnon"></i>
+                        <span>افزودن به مورد علاقه ها</span>
+                    </div>
+
+                    <h6 class=" mt-4 ms-2 fw-bold ">قیمت : <span class="product_price"> 
+998,000 تومان                    </span> </h6>
+
+
+
+                    <div class="btn-group add_box mt-3 w-25">
+                        <button class="btn btn-outline-secondary bg-success text-white" onclick="plus(this)"><i
+                                class="bi-plus"></i></button>
+
+                        <input type="text" class="form-control add_input text-center" value="1">
+                        <button class="btn btn-outline-secondary bg-danger text-white " onclick="mines(this)"><i
+                                class="bi bi-dash"></i></button>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+     
+
+    </main>
+
+
+
+  <!-- =============فوتر========== -->
+    <footer class="container-fluid text-dark py-5 mt-5">
+        <div class="row g-4">
+            <div id="logo_info_side" class="col-lg-4 col-12 ps-lg-5">
+                <img id="footer_logo" class="mb-3" src="pics/logo.png" alt="لوگو">
+                <p id="slogan_text" class="fw-bold mt-2">
+                    با خانومی، خود جدیدت رو کشف کن.
+                </p>
+
+                <p class="mb-2 d-flex align-items-center gap-2">
+                    <a class="text-decoration-none text-dark" href="#">
+                        <i class="bi bi-geo-alt fs-5 me-1"></i>
+                        تهران، خیابان ولیعصر، پلاک ۱۲۳
+                    </a>
+                </p>
+
+                <p class="mb-2 d-flex align-items-center gap-2">
+                    <a class="text-decoration-none text-dark" href="#">
+                        <i class="bi bi-telephone fs-5 me-1"></i>
+                        021-12345678
+                    </a>
+                </p>
+
+                <p class=" align-items-center gap-2">
+                    <a class="text-decoration-none text-dark" href="#">
+                        <i class="bi bi-envelope fs-5 me-1"></i>
+                        info@khanumi.ir
+                    </a>
+                </p>
+            </div>
+
+            <hr class="border-dark d-lg-none">
+            <!-- ستون راهنمای خرید -->
+
+            <ul id="buy_guide_column" class="col-4 col-lg-3  list-unstyled footer_ul">
+                <li class="fw-bold mt-2">راهنمای خرید</li>
+                <li class="mt-4"><a href="#" class="text-dark text-decoration-none">نحوه ثبت سفارش</a></li>
+                <li class="mt-4"><a href="#" class="text-dark  text-decoration-none">نحوه ارسال سفارش</a></li>
+                <li class="mt-4"><a href="#" class="text-dark text-decoration-none">شیوه پرداخت</a></li>
+                <li class="mt-4"><a href="#" class="text-dark text-decoration-none">رویه بازگشت کالا</a></li>
+            </ul>
+
+            <!-- .........ستون خدمات مشتری..... -->
+
+
+            <ul class="col-4 col-lg-3 list-unstyled footer_ul">
+                <li class="fw-bold mt-2">خدمات مشتری</li>
+                <li class="mt-4"><a href="#" class="text-dark text-decoration-none">تماس با ما</a></li>
+                <li class="mt-4"><a href="#" class="text-dark text-decoration-none">درباره ما</a></li>
+                <li class="mt-4"><a href="#" class="text-dark text-decoration-none"> قوانین</a></li>
+                <li class="mt-4"><a href="#" class="text-dark text-decoration-none">حریم خصوصی</a></li>
+                <li class="mt-4"><a href="#" class="text-dark text-decoration-none"> شرایط گارانتی</a></li>
+                <li class="mt-4"><a href="#" class="text-dark text-decoration-none"> پیگیری سفارش</a></li>
+            </ul>
+            <ul class="col-4 col-lg-2 list-unstyled footer_ul ">
+                <li class="fw-bold mt-2">دسترسی سریع</li>
+                <li class="mt-4"><a href="#" class="text-decoration-none text-dark">صفحه اصلی</a></li>
+                <li class="mt-4"><a href="#" class="text-decoration-none text-dark">پرفروش‌ترین‌ها</a></li>
+                <li class="mt-4"><a href="#" class="text-decoration-none text-dark">جدیدترین‌ها</a></li>
+                <li class="mt-4"><a href="#" class="text-decoration-none text-dark">سؤالات متداول</a></li>
+            </ul>
+        </div>
+        <div class="d-flex justify-content-center mt-5">
+            <img class="trust_logo me-3" src="pics/samandehi-logo.png" alt="لوگو ساماندهی">
+            <img class="trust_logo me-3" src="pics/enamad.png" alt="لوگو اینماد">
+            <img class="trust_logo me-3" src="pics/credit-union.png" alt="لوگو اتحادیه کشوری">
+        </div>
+
+        <p class="mt-5 text-center fw-bold fs-4">ما را در شبکه های اجتماعی دنبال کنید.</p>
+        <div id="social_box" class="d-flex justify-content-center gap-3">
+            <a class="text-decoration-none text-dark fs-3" href="http://instagram.com/p/
+"><i class="bi bi-instagram"></i></a>
+            <a class="text-decoration-none text-dark fs-3" href="https://t.me/+41794997040
+"><i class="bi bi-telegram "></i></a>
+            <a class="text-decoration-none text-dark fs-3" href="https://www.linkedin.com"><i
+                    class="bi bi-linkedin "></i></a>
+            <a class="text-decoration-none text-dark fs-3" href="https://wa.me/+41794997040
+"><i class="bi bi-whatsapp "></i></a>
+        </div>
+    </footer>
+
+
+
+      <script src="index.js"></script>
+
+ 
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

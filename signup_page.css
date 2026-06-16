@@ -1,0 +1,108 @@
+main {
+    width: 100%;
+    height: auto;
+}
+
+
+.custom_btn {
+    background-color: var(--brand-main);
+    color: var(--text-white);
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.custom_btn:hover {
+    background-color: var(--hover-btn);
+    color: var(--text-white);
+}
+
+#signup_bg {
+    width: 600px;
+
+    margin-top: 70px;
+    margin-right: 20px;
+}
+
+@media screen and (min-width:768px) and (max-width:992px) {
+    #signup_bg {
+        width: 335px !important;
+
+        margin-top: 200px;
+
+    }
+}
+
+@media screen and (min-width:993px) and (max-width:1238px) {
+    #signup_bg {
+        width: 420px !important;
+        margin-top: 100px;
+        margin-right: 50px;
+    }
+}
+
+
+
+.error {
+    color: var(--red-color);
+    width: 10px;
+    height: 10px;
+    font-size: 20px;
+}
+
+
+#show_pass {
+    position: absolute;
+    top: 10px;
+    left: 25px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+
+#show_pass_confirm {
+    position: absolute;
+    top: 10px;
+    left: 25px;
+    cursor: pointer;
+    z-index: 10;
+}
+.red {
+    color: var(--red-color);
+}
+
+.green {
+    color: rgb(11, 185, 11);
+}
+
+.form-control:focus {
+    box-shadow: none;
+
+}
+
+
+
+#signup_bg {
+    width: 600px;
+
+    margin-top: 70px;
+    margin-right: 20px;
+}
+
+@media screen and (min-width:768px) and (max-width:992px) {
+    #signup_bg {
+        width: 335px !important;
+
+        margin-top: 200px;
+
+    }
+}
+
+@media screen and (min-width:993px) and (max-width:1238px) {
+    #signup_bg {
+        width: 420px !important;
+        margin-top: 100px;
+        margin-right: 50px;
+    }
+}
