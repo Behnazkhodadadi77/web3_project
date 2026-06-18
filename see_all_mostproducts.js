@@ -40,7 +40,7 @@ const products = [
             { class: "color_shiri", slide: 4 }
         ]
     },
-     {
+    {
         name: " بامبر کایلی ",
         code: 376,
         price: "1,998,000",
@@ -50,17 +50,17 @@ const products = [
             "pics/kaylie_black.png",
             "pics/kaylie_surati.png",
             "pics/kaylie_blue.png"
-            
+
 
         ],
         colors: [
             { class: "color_white", slide: 0 },
-            { class: "color_black", slide: 1},
+            { class: "color_black", slide: 1 },
             { class: "color_pink", slide: 2 },
             { class: "color_blue", slide: 3 }
         ]
     },
-     {
+    {
         name: " جکت کانر ",
         code: 289,
         price: "3,298,000",
@@ -71,14 +71,14 @@ const products = [
             "pics/coner_white.png",
             "pics/coner_brown.png",
             "pics/coner_black.png"
-            
+
 
         ],
         colors: [
             { class: "color_white", slide: 2 },
-            { class: "color_black", slide: 4},
+            { class: "color_black", slide: 4 },
             { class: "color_brown", slide: 3 }
-            
+
         ]
     },
     {
@@ -90,17 +90,17 @@ const products = [
             "pics/jacket_Borfo1.png",
             "pics/Borfo_brown.png",
             "pics/Borfo_nescafe.png"
-            
-        
+
+
         ],
         colors: [
-          
+
             { class: "color_brown", slide: 1 },
             { class: "color_nescafe", slide: 2 },
-            
+
         ]
     },
-     {
+    {
         name: " جکت ولگا ",
         code: 273,
         price: "3,298,000",
@@ -109,18 +109,19 @@ const products = [
             "pics/jacket_volga1.png",
             "pics/jacket_volga_white.png",
             "pics/jacket_volga_blue.png"
-            
-            
+
+
 
         ],
         colors: [
-          
+
             { class: "color_white", slide: 1 },
             { class: "color_blue", slide: 2 },
-            
+
         ]
     }
 ];
+
 
 const see_all_mostselled_products = () => {
     const productsBox = document.getElementById("all_mostselled_products");
@@ -175,3 +176,5 @@ const see_all_mostselled_products = () => {
 };
 
 document.addEventListener("DOMContentLoaded", see_all_mostselled_products);
+
+// علت گذاشتن جوین اینه که مپ خروجیش یه آرایه س و اگر جوین نذارم بین کارت های محصولم یک کاما قرار میگیره و برای این جوین رو میذارم
