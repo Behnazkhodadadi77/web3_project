@@ -69,23 +69,40 @@ const block_nationalcode = (e) => {
 
 
 
-
 const check_national_code = (e) => {
-    const national_code = document.getElementById('national_code').value
+    const national_code = document.getElementById('national_code').value;
     const error_national_code = document.getElementById('error_national_code');
     const allDigitEqual = ["0000000000", "1111111111", "2222222222", "3333333333", "4444444444", "5555555555", "6666666666", "7777777777", "8888888888", "9999999999"];
 
-    if (allDigitEqual.indexOf(national_code) != -1 || !/^[0-9]{10}$/.test(national_code)) {
-        error_national_code.innerHTML = '*'
+    // ۱. فیلترهای اولیه
+    if (allDigitEqual.indexOf(national_code) !== -1 || !/^[0-9]{10}$/.test(national_code)) {
+        error_national_code.innerHTML = '*';
+        return; // اینجا متوقف می‌شود و دیگر ادامه نمی‌دهد
     }
-// ینی وقتی کاربر کد ملی رو وارد کرد تو برو رو آرایه allDigitEqual
-// چک کن که آیا کد ملی وارد شده جزو اینا هست یا نه اگر بود ارور ستاره رو بذار
 
-    else
 
-        error_national_code.innerHTML = ''
+    const chArray = Array.from(national_code);
+    
+   
+    let b = 0;
+    for (let i = 0; i < 9; i++) {
+        b += parseInt(chArray[i]) * (10 - i);
+    }
 
+    const c = b % 11;
+    const a = parseInt(chArray[9]);
+
+    // ۳. بررسی شرط نهایی (رقم کنترلی)
+    const isValid = ((c < 2) && (a == c)) || ((c >= 2) && ((11 - c) == a));
+
+    // ۴. نمایش نتیجه نهایی در صفحه
+    if (isValid) {
+        error_national_code.innerHTML = ''; 
+    } else {
+        error_national_code.innerHTML = '*';
+    }
 }
+
 
 // ===========کد اشتباه=======================
 
