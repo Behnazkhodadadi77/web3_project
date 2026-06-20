@@ -73,16 +73,17 @@ const block_nationalcode = (e) => {
 const check_national_code = (e) => {
     const national_code = document.getElementById('national_code').value
     const error_national_code = document.getElementById('error_national_code');
+    const allDigitEqual = ["0000000000", "1111111111", "2222222222", "3333333333", "4444444444", "5555555555", "6666666666", "7777777777", "8888888888", "9999999999"];
 
-
-    if (/^[0-9]{10}$/.test(national_code)) {
-
-        error_national_code.innerHTML = ''
+    if (allDigitEqual.indexOf(national_code) != -1 || !/^[0-9]{10}$/.test(national_code)) {
+        error_national_code.innerHTML = '*'
     }
+// ینی وقتی کاربر کد ملی رو وارد کرد تو برو رو آرایه allDigitEqual
+// چک کن که آیا کد ملی وارد شده جزو اینا هست یا نه اگر بود ارور ستاره رو بذار
 
     else
-        error_national_code.innerHTML = '*'
 
+        error_national_code.innerHTML = ''
 
 }
 
