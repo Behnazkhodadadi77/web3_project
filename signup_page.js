@@ -449,7 +449,6 @@ const block_captcha_char = (e) => {
 
 let captcha;
 let alphabets = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz";
-let status = document.getElementById('status');
 const error_captcha = document.getElementById('error_captcha');
 
 const generate_captcha = () => {
@@ -476,7 +475,7 @@ const check = () => {
 
     else {
 
-        status.innerHTML = 'کد کپچا اشتباه وارد شده است.'
+  
         error_captcha.innerHTML = '*'
         document.getElementById('entered_captcha').value = '';
     }
