@@ -82,8 +82,8 @@ const check_national_code = (e) => {
 
 
     const chArray = Array.from(national_code);
-    
-   
+
+
     let b = 0;
     for (let i = 0; i < 9; i++) {
         b += parseInt(chArray[i]) * (10 - i);
@@ -97,8 +97,10 @@ const check_national_code = (e) => {
 
     // ۴. نمایش نتیجه نهایی در صفحه
     if (isValid) {
-        error_national_code.innerHTML = ''; 
-    } else {
+        error_national_code.innerHTML = '';
+    }
+
+    else {
         error_national_code.innerHTML = '*';
     }
 }
@@ -408,3 +410,76 @@ for (let i = 0; i < document.querySelectorAll('input').length; i++) {
 }
 
 document.querySelectorAll('input')[0].focus();
+
+// ===================کد کپچا==========================
+
+
+
+const block_captcha_char = (e) => {
+ if (
+        e.key == 'Backspace' ||
+        e.key == 'Delete' ||
+        e.key == 'Tab' ||
+        e.key == 'Enter' ||
+        e.key == 'ArrowLeft' ||
+        e.key == 'ArrowRight' ||
+        e.key == 'ArrowUp' ||
+        e.key == 'ArrowDown' ||
+        e.key == 'Home' ||
+        e.key == 'End'
+    ) {
+        return true;
+    }
+
+    const allowedcaptchaChars = /^[A-za-z0-9]$/;
+
+    if (!allowedcaptchaChars.test(e.key)) {
+
+        e.preventDefault();
+        return false;
+    }
+
+    return true;
+
+}
+
+
+
+
+
+let captcha;
+let alphabets = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz";
+let status = document.getElementById('status');
+const error_captcha = document.getElementById('error_captcha');
+
+const generate_captcha = () => {
+    let first = alphabets[Math.floor(Math.random() * alphabets.length)];
+    let second = Math.floor(Math.random() * 10);
+    let third = Math.floor(Math.random() * 10);
+    let fourth = alphabets[Math.floor(Math.random() * alphabets.length)];
+    let fifth = alphabets[Math.floor(Math.random() * alphabets.length)];
+    let sixth = Math.floor(Math.random() * 10);
+
+    captcha = first.toString() + second.toString() + third.toString() + fourth.toString() + fifth.toString() + sixth.toString();
+
+    document.getElementById('generated_captcha').innerHTML = captcha;
+    document.getElementById('entered_captcha').value = '';
+    status.innerHTML = '';
+}
+
+const check = () => {
+
+    let entered_captcha = document.getElementById('entered_captcha').value;
+    if (entered_captcha == captcha) {
+        error_captcha.innerHTML = ''
+    }
+
+    else {
+
+        status.innerHTML = 'کد کپچا اشتباه وارد شده است.'
+        error_captcha.innerHTML = '*'
+        document.getElementById('entered_captcha').value = '';
+    }
+}
+
+generate_captcha();
