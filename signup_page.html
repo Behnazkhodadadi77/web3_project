@@ -414,13 +414,13 @@ Official_parliamentary" class="nav-item  me-4  ms-3 mt-3">
                             <button onclick="generate_captcha()" class="btn btn-outline-secondary">
                                 <i class="bi bi-arrow-repeat"></i>
                             </button>
-                            <input id="entered_captcha" type="text" class="form-control" placeholder="کد را وارد کنید">
+                            <input onkeydown="block_captcha_char(event)" id="entered_captcha" type="text" class="form-control" placeholder="کد را وارد کنید">
                             <span id="error_captcha" class="error ms-1 mb-2">*</span>
 
                             <button onclick="check()" class="btn bg-success text-white">تایید</button>
                         </div>
 
-                        <h1 class="mb-4 mt-2" id="status"></h1>
+                        <span class="mb-4 mt-2" id="status"></span>
 
 
                         <div class="">
