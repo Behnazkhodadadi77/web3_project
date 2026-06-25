@@ -466,7 +466,7 @@ const generate_captcha = () => {
     status.innerHTML = '';
 }
 
-const check = () => {
+const check_captcha = () => {
 
     let entered_captcha = document.getElementById('entered_captcha').value;
     if (entered_captcha == captcha) {
