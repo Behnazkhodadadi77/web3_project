@@ -416,7 +416,7 @@ document.querySelectorAll('input')[0].focus();
 
 
 const block_captcha_char = (e) => {
- if (
+    if (
         e.key == 'Backspace' ||
         e.key == 'Delete' ||
         e.key == 'Tab' ||
@@ -453,6 +453,18 @@ const error_captcha = document.getElementById('error_captcha');
 
 const generate_captcha = () => {
     let first = alphabets[Math.floor(Math.random() * alphabets.length)];
+
+    // alphabets.length: ببین کلاً چند تا حرف داریم؟» (مثلاً ۵۲ تا)
+    // Math.random() * ... یک عدد تصادفی بین ۰ تا ۵۲ انتخاب کن
+    // 52 طول آلفابت هست
+    // Math.floor(...): اون عدد اعشاری رو گرد کن تا بشه یک عدد صحیح (مثلاً ۲۵).
+    // alphabets[...]: حالا برو از توی اون حروف، حرفی که شماره‌اش ۲۵ هست رو برام بیار
+
+    // در جاوا اسکریپت، رشته‌ها مثل یک لیست از کاراکترها هستند که هر کدام یک شماره جایگاه دارند:
+
+    // alphabets[0] اولین حرف
+    // alphabets[1] دومین حرف
+
     let second = Math.floor(Math.random() * 10);
     let third = Math.floor(Math.random() * 10);
     let fourth = alphabets[Math.floor(Math.random() * alphabets.length)];
@@ -475,7 +487,7 @@ const check_captcha = () => {
 
     else {
 
-  
+
         error_captcha.innerHTML = '*'
         document.getElementById('entered_captcha').value = '';
     }
