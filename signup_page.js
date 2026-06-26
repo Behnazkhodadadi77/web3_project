@@ -404,12 +404,12 @@ const check_mobile = (e) => {
 }
 
 // empty
-for (let i = 0; i < document.querySelectorAll('input').length; i++) {
+// for (let i = 0; i < document.querySelectorAll('input').length; i++) {
 
-    document.querySelectorAll('input')[i] = ''
-}
+//     document.querySelectorAll('input')[i] = ''
+// }
 
-document.querySelectorAll('input')[0].focus();
+// document.querySelectorAll('input')[0].focus();
 
 // ===================کد کپچا==========================
 
@@ -494,3 +494,11 @@ const check_captcha = () => {
 }
 
 generate_captcha();
+
+
+const signup_btn = document.querySelector('#signup_btn');
+
+signup_btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.location.href = "dashboard.html";
+});
