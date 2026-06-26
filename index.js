@@ -174,9 +174,9 @@ const render_basket = () => {
 
     if (arr_basket.length == 0) {
         // --- حالت خالی ---
-        if (emptyBox) emptyBox.innerHTML = '<img src="pics/empty_shop_basket_pic.png">';
-        if (emptyText) emptyText.innerHTML = 'سبد خرید شما خالی است.';
-        if (productsItems) productsItems.innerHTML = '';
+        emptyBox.innerHTML = '<img src="pics/empty_shop_basket_pic.png">';
+        emptyText.innerHTML = 'سبد خرید شما خالی است.';
+        productsItems.innerHTML = '';
 
     } else {
         // --- حالت پر ---
@@ -377,10 +377,6 @@ window.onload = render_basket;
 
 // این خطوط باعث میشن تعداد سبد خرید در هر صفحه آپدیت باشه
 
-// window.arr_basket = arr_basket; با این خط وقتی چیزی به سبد خرید اضافه میکنیم به آرایه اضافه میشود و در لوکال استوریج ذخیره میشود و در ویندو ذخیره میشود تا بقیه فایل ها بهش دسترسی داشته باشن
-
-// و تابع رندر بسکت صدا زده میشود  و داخلش این خط هست
-// const basketData = window.arr_basket || [];
 // و ما میایم محتویات ویندو که تو لوکال استوریج ذخیره شده رو میریزیم توی بسکت دیتا تا توی این فایل باهاش کار کنیم و با خط زیر
 //  const countElements = [document.getElementById('count_delivery'), document.getElementById('count_delivery2')];
 // countElements.forEach(el => {
