@@ -403,13 +403,7 @@ const check_mobile = (e) => {
     }
 }
 
-// empty
-// for (let i = 0; i < document.querySelectorAll('input').length; i++) {
 
-//     document.querySelectorAll('input')[i] = ''
-// }
-
-// document.querySelectorAll('input')[0].focus();
 
 // ===================کد کپچا==========================
 
@@ -445,11 +439,9 @@ const block_captcha_char = (e) => {
 
 
 
-
-
 let captcha;
 let alphabets = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz";
-const error_captcha = document.getElementById('error_captcha');
+
 
 const generate_captcha = () => {
     let first = alphabets[Math.floor(Math.random() * alphabets.length)];
@@ -478,19 +470,31 @@ const generate_captcha = () => {
     status.innerHTML = '';
 }
 
-const check_captcha = () => {
 
-    let entered_captcha = document.getElementById('entered_captcha').value;
-    if (entered_captcha == captcha) {
-        error_captcha.innerHTML = ''
+const check_captcha = (e) => {
+    const error_captcha = document.getElementById('error_captcha');
+    const input_element = document.getElementById('entered_captcha');
+    const entered_value = input_element.value;
+
+    // ۱. اگر مقدار وارد شده با کپچا برابر بود
+    if (entered_value == captcha) {
+        error_captcha.innerHTML = '';
+
+        input_element.classList.remove('is-invalid');
+        input_element.classList.add('is-valid');
+    }
+    // ۲. اگر مقدار وارد شده اشتباه بود (فقط اگر طولش به اندازه کپچا رسیده باشد)
+    else if (entered_value.length == captcha.length) {
+
+        input_element.classList.remove('is-valid');
+        input_element.classList.add('is-invalid');
     }
 
     else {
-
-
-        error_captcha.innerHTML = '*'
-        document.getElementById('entered_captcha').value = '';
+        error_captcha.innerHTML = '*'; // ستاره همیشه باشد تا کاربر بداند باید پر کند
+        input_element.classList.remove('is-valid', 'is-invalid');
     }
+
 }
 
 generate_captcha();
