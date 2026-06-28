@@ -183,7 +183,7 @@ const render_basket = () => {
         if (emptyBox) emptyBox.innerHTML = "";
         if (emptyText) emptyText.innerHTML = "";
 
-        // let htmlContent = '';
+
         let html = `
 
     <div class="cart-header d-none  d-lg-flex">
