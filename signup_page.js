@@ -75,7 +75,7 @@ const check_national_code = (e) => {
     const allDigitEqual = ["0000000000", "1111111111", "2222222222", "3333333333", "4444444444", "5555555555", "6666666666", "7777777777", "8888888888", "9999999999"];
 
     // ۱. فیلترهای اولیه
-    if (allDigitEqual.indexOf(national_code) !== -1 || !/^[0-9]{10}$/.test(national_code)) {
+    if (allDigitEqual.includes(national_code) || !/^[0-9]{10}$/.test(national_code)) {
         error_national_code.innerHTML = '*';
         return; // اینجا متوقف می‌شود و دیگر ادامه نمی‌دهد
     }
