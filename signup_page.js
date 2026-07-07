@@ -467,7 +467,7 @@ const generate_captcha = () => {
 
     document.getElementById('generated_captcha').innerHTML = captcha;
     document.getElementById('entered_captcha').value = '';
-    status.innerHTML = '';
+   
 }
 
 
