@@ -483,17 +483,14 @@ const check_captcha = (e) => {
         input_element.classList.remove('is-invalid');
         input_element.classList.add('is-valid');
     }
-    // ۲. اگر مقدار وارد شده اشتباه بود (فقط اگر طولش به اندازه کپچا رسیده باشد)
-    else if (entered_value.length == captcha.length) {
+
+    else  {
 
         input_element.classList.remove('is-valid');
         input_element.classList.add('is-invalid');
     }
 
-    else {
-        error_captcha.innerHTML = '*'; // ستاره همیشه باشد تا کاربر بداند باید پر کند
-        input_element.classList.remove('is-valid', 'is-invalid');
-    }
+ 
 
 }
 
