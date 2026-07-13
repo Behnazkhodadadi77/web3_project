@@ -199,7 +199,7 @@ const render_basket = () => {
     </div>
     <div class="cart-items ">
     </div>
-
+<div class="container "></div>
 
 `;
 
@@ -280,15 +280,15 @@ const render_basket = () => {
 
         </div>
 
-
+<hr class="d-none d-lg-flex">
 
      
 
 
 
-    <div class="container d-lg-none">
+   
 
-        <div class="row ">
+        <div class="row d-lg-none">
 
             <div class="col-4">
                   <a href="${productLink}" title="برای مشاهده محصول کلیک کنید">
@@ -323,8 +323,8 @@ const render_basket = () => {
            
         </div>
   
-       <hr>
-    </div>
+       <hr class="d-lg-none">
+  
             `;
         });
 
