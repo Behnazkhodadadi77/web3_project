@@ -35,7 +35,7 @@ sizeBoxes.forEach(box => {
 });
 
 
-const plus = (t) => {
+const plus = (t, index) => {
 
     const ch = t.parentNode.children;
     let count = ch[1].value
@@ -53,13 +53,21 @@ const plus = (t) => {
 
     ch[1].value = count
 
+    arr_basket[index].selectedcount = count;
+
+    localStorage.setItem(
+        'my_basket_data',
+        JSON.stringify(arr_basket)
+    );
+
+    render_basket();
 
 }
 
 
 // اگه شرط الس ایف رو کوپکتر مساوی صفر بذاریم  و بعد کانت مثلا صفر بشود و ما دوباره روی علامت مثبت کلیک کنیم مقدار افزایش پیدا نمیکند چون وارد تابع میشویم و شرط ایف اول برقرار نیست وارد الس ایف میشود و صفر کوچکتر مساوی صفر هست و شرط برقراره و دوباره کانت صفر میشه و دیگر افزایش نمی یابد
 
-const mines = (t) => {
+const mines = (t, index) => {
 
     const ch = t.parentNode.children;
     let count = ch[1].value
@@ -75,6 +83,14 @@ const mines = (t) => {
 
     ch[1].value = count
 
+    arr_basket[index].selectedcount = count;
+
+    localStorage.setItem(
+        'my_basket_data',
+        JSON.stringify(arr_basket)
+    );
+
+    render_basket();
 
 }
 
@@ -267,9 +283,9 @@ const render_basket = () => {
             <!-- ستون تعداد -->
             <div class=" col-lg-1 mb-2 ">
                 <div class="btn-group add_box ">
-                    <button class="btn btn-outline-secondary bg-success text-white" onclick="plus(this)"><i class="bi-plus"></i></button>
+                    <button class="btn btn-outline-secondary bg-success text-white" onclick="plus(this,${index})"><i class="bi-plus"></i></button>
                     <input type="text" class="form-control add_input text-center" value="${item.selectedcount}">
-                    <button class="btn btn-outline-secondary bg-danger text-white" onclick="mines(this)"><i class="bi bi-dash"></i></button>
+                    <button class="btn btn-outline-secondary bg-danger text-white" onclick="mines(this,${index})"><i class="bi bi-dash"></i></button>
                 </div>
             </div>
 
