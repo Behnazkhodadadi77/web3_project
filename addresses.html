@@ -442,12 +442,55 @@ Official_parliamentary" class="nav-item  me-4  ms-3 mt-3">
         </div>
     </footer>
 
+<!-- === Modal Structure for Adding/Editing Address === -->
+<div class="modal fade" id="addressModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addressModalLabel">افزودن آدرس جدید</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" ></button>
+            </div>
+            <div class="modal-body">
+                <form id="addressForm">
+                    <!-- Hidden input for index, to know if we are editing or adding -->
+                    <input type="hidden" id="addressIndex">
 
+                    <div class="row g-3">
+                        <div class="col-md-6 col-12">
+                            <label for="addressTitle" class="form-label">عنوان آدرس (مثال: خانه، محل کار)</label>
+                            <input onkeypress="check_address_title(event)" type="text" class="form-control" id="addressTitle" placeholder="خانه">
+                        </div>
+                        <div class="col-md-6 col-12">
+                            <label for="addressPhone" class="form-label">شماره تماس</label>
+                            <input onkeyup="check_mobile_address(event)" type="number" class="form-control" id="addressPhone" placeholder="0912xxxxxxx">
+                        </div>
+                        <div class="col-6">
+                            <label for="addressCity" class="form-label">شهر</label>
+                            <input onkeypress="check_city(event)" type="text" class="form-control" id="addressCity" placeholder="تهران">
+                        </div>
+                        <div class="col-9">
+                            <label for="addressStreet" class="form-label">خیابان و کوچه</label>
+                            <input onkeypress="check_street(event)" type="text" class="form-control" id="addressStreet" placeholder="خیابان اصلی، کوچه فرعی">
+                        </div>
+                        <div class="col-12">
+                            <label for="addressDetails" class="form-label">پلاک، واحد، طبقه</label>
+                            <textarea onkeypress="check_details(event)" class="form-control" id="addressDetails" rows="3" placeholder="پلاک 10، واحد 2"></textarea>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">انصراف</button>
+                <button type="button" class="btn btn-primary" id="saveAddressBtn">ذخیره آدرس</button>
+            </div>
+        </div>
+    </div>
+</div>
 
-
+    <script src="js/bootstrap.bundle.min.js"></script>
     <script src="index.js"></script>
     <script src="addresses.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
+
 
 
 
