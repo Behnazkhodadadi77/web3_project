@@ -177,4 +177,7 @@ const see_all_mostselled_products = () => {
 
 document.addEventListener("DOMContentLoaded", see_all_mostselled_products);
 
+
+// اینم یعنی وقتی اچ تی ام ال صفحه کامل آماده شد، تابع see_all_mostselled_products را اجرا کن.
+
 // علت گذاشتن جوین اینه که مپ خروجیش یه آرایه س و اگر جوین نذارم بین کارت های محصولم یک کاما قرار میگیره و برای این جوین رو میذارم
