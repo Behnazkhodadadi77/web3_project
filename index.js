@@ -83,6 +83,11 @@ const mines = (t, index) => {
 
     ch[1].value = count
 
+
+    if (count === 0) {
+        remove_from_basket(index);
+        return;
+    }
     arr_basket[index].selectedcount = count;
 
     localStorage.setItem(
@@ -196,8 +201,8 @@ const render_basket = () => {
 
     } else {
         // --- حالت پر ---
-        if (emptyBox) emptyBox.innerHTML = "";
-        if (emptyText) emptyText.innerHTML = "";
+        emptyBox.innerHTML = "";
+        emptyText.innerHTML = "";
 
 
         let html = `
@@ -328,10 +333,10 @@ const render_basket = () => {
                  <hr class="bg-dark">
               
                   
-                       <div class="btn-group add_box "> <button class="btn btn-outline-secondary bg-success text-white" onclick="plus(this)"><i
+                       <div class="btn-group add_box "> <button class="btn btn-outline-secondary bg-success text-white" onclick="plus(this,${index})"><i
                                 class="bi-plus"></i></button>
                         <input type="text" class="form-control add_input text-center" value="${item.selectedcount}">
-                        <button class="btn btn-outline-secondary bg-danger text-white" onclick="mines(this)"><i
+                        <button class="btn btn-outline-secondary bg-danger text-white" onclick="mines(this,${index})"><i
                                 class="bi bi-dash"></i></button></div>
                   
             </div>
