@@ -90,14 +90,6 @@
     text-align: center;
 }
 
-/* هر ردیف محصول */
-/* .cart-item {
-    display: flex;
-
-    padding: 15px 0;
-    border-bottom: 1px solid #eee;
-    align-items: center;
-} */
 
 .cart-item:last-child {
     border-bottom: none;
@@ -135,10 +127,6 @@
     text-align: center;
 }
 
-/* .col-action {
-    width: 10%;
-    text-align: center;
-} */
 
 
 .product_pic {
@@ -148,11 +136,7 @@
 
 }
 
-/* .product_pic2 {
-    max-width: 120px;
-    height: auto;
-    border-radius: 8px;
-} */
+
 
 @media screen and (min-width:768px) and (max-width:992px) {
     .product_pic {
