@@ -78,10 +78,6 @@
     margin-bottom: 20px;
 }
 
-.cart-header div {
-    text-align: center;
-}
-
 
 .cart-item:last-child {
     border-bottom: none;
