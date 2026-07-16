@@ -340,7 +340,7 @@ const render_basket = () => {
                                 class="bi bi-dash"></i></button></div>
                   
             </div>
-       <i class="bi-trash trash_can_icon2 d-lg-none text-end " onclick="remove_from_basket(${index})"></i>
+       <i class="bi-trash trash_can_icon d-lg-none text-end " onclick="remove_from_basket(${index})"></i>
            
         </div>
   
