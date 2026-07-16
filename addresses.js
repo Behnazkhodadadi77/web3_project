@@ -80,7 +80,11 @@ const openAddressModal = (index) => {
         // حالت ویرایش: اطلاعات آدرس مورد نظر را از آرایه بردار و در فرم بریز
         // برای اینکه وقتی کاربر داره ویرایش میکنه اطلاعاتش وجود داشته باشن تو فرم
         const addr = addresses[index];
+
+        
         document.getElementById('addressTitle').value = addr.title;
+
+        // ینی مثلا ایندکس ما صفره و ائلین آدرس توی آرایه س و حالا اون ادر ینی اطلاعات ایندکس اول که شامل تایتل و و شهر و ... هست وحالا خط بالا ینی برو اون اینپوتی که آیدیش آدرس تایتل هست رو پیداش کن و مقدارش رو برابر addr.title قرار بده اینطوری اون اینپوت پر میشه وقتی کاربر میخواد ویرایش کنه
         document.getElementById('addressPhone').value = addr.phone;
         document.getElementById('addressCity').value = addr.city;
         document.getElementById('addressStreet').value = addr.street;
@@ -89,8 +93,12 @@ const openAddressModal = (index) => {
         addressInputIndex.value = index; // شماره آدرس را در فیلد مخفی نگه می‌داریم
         document.getElementById('addressModalLabel').textContent = 'ویرایش آدرس';
     } else {
+        
         addressForm.reset(); // ابتدا فرم را کاملاً خالی می‌کنیم
-        addressInputIndex.value = ''; // فیلد مخفی را خالی می‌کنیم
+
+        // خط بالا برای یه موقعیت خاص نیازه .وقتی مثلا  یه آدرس رو داریم ویرایش میکنیم و بعد اطلاعات رو ویرایش کردیم و بعد بدون ذخیره مودال رو بستیم.حالا وقتی روی افزودن آدرس جدید کلیک کنم اطلاعات فرم قبلی هنوز هست
+
+
         // حالت افزودن: عنوان مودال را عوض کن
         document.getElementById('addressModalLabel').textContent = 'افزودن آدرس جدید';
 
