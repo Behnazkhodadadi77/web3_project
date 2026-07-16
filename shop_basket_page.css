@@ -38,14 +38,6 @@
 
 
 
-.trash_can_icon2 {
-    color: red;
-    cursor: pointer;
-    font-size: 20px;
-
-
-}
-
 .see_product_btn {
     background-color: var(--brand-main);
     color: var(--text-white);
